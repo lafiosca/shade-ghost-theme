@@ -191,6 +191,7 @@ footer {
   padding: 40px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: #94a8b1;
+  font-size: small;
   text-aligh: center;
   background-color: #263238; }
   @media (max-width: 500px) {
