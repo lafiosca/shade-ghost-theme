@@ -1,18 +1,3 @@
-// SIDEBAR
-$(function() {
-    // Open navbarSide when button is clicked
-    $('.navbar-toggler').on('click', function() {
-        $('.navbar-side').addClass('reveal');
-        $('.overlay').show();
-    });
-
-    // Close navbarSide when the outside of menu is clicked
-    $('.overlay').on('click', function(){
-        $('.navbar-side').removeClass('reveal');
-        $('.overlay').hide();
-    });
-});
-
 // INFINITE SCROLL PAGINATION
 $(function () {
     var blogUrl;
@@ -27,7 +12,7 @@ $(function () {
     }
     $(window).scroll(function () {
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-            if (page >= max_pages) {
+            if (page >= totalPages) {
                 return;
             }
             ++page;

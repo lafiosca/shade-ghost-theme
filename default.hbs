@@ -24,10 +24,13 @@
       </div>
     </footer>
 
-    <script>var max_pages = parseInt('{{pagination.pages}}');</script>
     <script src="https://cdn.cloudcache.dk/jquery/jquery-1.12.4.min.js"></script>
     <script src="{{asset "js/prism.min.js"}}"></script>
-    <script src="{{asset "js/shade.js"}}"></script>
+    <script src="{{asset "js/sidebar.js"}}"></script>
+    {{#is "page"}}
+      <script>var totalPages = parseInt('{{pagination.pages}}');</script>
+      <script src="{{asset "js/pagination.js"}}"></script>
+    {{/is}}
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
   </body>
